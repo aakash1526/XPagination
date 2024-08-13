@@ -6,7 +6,6 @@ function App() {
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(10);
 
-  // Fetch the data when the component mounts
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -46,7 +45,7 @@ function App() {
         <tbody>
           {currentItems.map((item, index) => (
             <tr key={item.id}>
-              <td>{indexOfFirstItem + index + 1}</td> {/* Display the sequential ID */}
+              <td>{indexOfFirstItem + index + 1}</td> 
               <td>{item.name}</td>
               <td>{item.email}</td>
               <td>{item.role}</td>
